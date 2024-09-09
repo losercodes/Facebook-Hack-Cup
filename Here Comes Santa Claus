@@ -1,0 +1,199 @@
+Problem A: Here Comes Santa Claus
+10 points
+Log In To Submit
+Problem
+My Submissions
+Solution
+Contest Announcement
+[Update (12:15pm PT)]: The system had been experiencing technical difficulties. To account for this, we have extended the contest by 30 minutes and reset timers for everyone on every problem. Your existing accepted solutions and time penalty are not affected. We won't be reviewing clarifications sent to us prior to 12pm PT, so please resubmit to any problems you've had issues with with the remaining time. In addition, you will now advance to round 2 if you score any points on this round.
+…right down Santa Claus Lane!
+Santa Claus Lane is home to 
+N
+N elves, the 
+i
+ith of whom lives 
+X
+i
+X 
+i
+​
+  meters from the start of the lane. As Santa's little helper, you're tasked to assign elves to work on toys for good little girls and boys. Specifically, you must assign each elf to work on some toy so that at least 
+2
+2 toys get worked on, and no elf works on a toy alone.
+All elves working on the same toy will meet at the point which minimizes the farthest distance that any of them would need to walk. Formally, if the elves assigned to a given toy live at 
+X
+1
+X 
+1
+​
+ , 
+X
+2
+X 
+2
+​
+ , 
+…
+…, then they will meet at point 
+P
+P such that 
+max
+⁡
+(
+∣
+X
+1
+−
+P
+∣
+max(∣X 
+1
+​
+ −P∣, 
+∣
+X
+2
+−
+P
+∣
+∣X 
+2
+​
+ −P∣, 
+…
+…
+)
+) is as small as possible.
+For instance, the first sample case is depicted below:
+
+Santa is supervising, and you reckon he could use some exercise. Among all valid assignments of elves to toys, what's the farthest Santa would need to walk to visit all meeting points? Santa may start and end anywhere, but will try to walk as little as possible after seeing your assignments.
+Constraints
+1
+≤
+T
+≤
+20
+1≤T≤20
+4
+≤
+N
+≤
+1
+0
+5
+4≤N≤10 
+5
+ 
+1
+≤
+X
+i
+≤
+1
+0
+9
+1≤X 
+i
+​
+ ≤10 
+9
+ 
+Input Format
+Input begins with an integer 
+T
+T, the number of test cases. Each case begins with one line containing the integer 
+N
+N, followed by a second line containing the the 
+N
+N integers 
+X
+1
+.
+.
+.
+X
+N
+X 
+1
+​
+ ...X 
+N
+​
+ .
+Output Format
+For the 
+i
+ith test case, print "Case #i: " followed by a single real number, the farthest distance Santa would need to walk in meters. Your answer will be considered correct if it differs from the jury's answer by at most 
+1
+0
+−
+6
+10 
+−6
+  meters or at most 
+0.0001
+0.0001%, whichever is larger.
+Sample Explanation
+In the first sample case, elves living at 
+1
+m
+1m and 
+3
+m
+3m will work on a toy. Elves living at 
+7
+m
+7m, 
+12
+m
+12m, and 
+13
+m
+13m will work on another toy, and elves at 
+17
+m
+17m and 
+23
+m
+23m will work on the third toy. The toys will be made at 
+2
+m
+2m, 
+10
+m
+10m and 
+20
+m
+20m respectively. Santa would need to walk at least 
+18
+m
+18m in total to visit every meeting point.
+The second sample case is depicted below. No elf is allowed to work alone and we must make two toys. One optimal way of doing this is to have the leftmost 
+3
+3 elves work on one toy at 
+2
+m
+2m, and the rest work on the other toy at 
+4.5
+m
+4.5m. This would maximize the distance Santa would have to walk among all valid elf assignments.
+
+In the third case, the two toys will be made at 
+55
+m
+55m and 
+5500
+m
+5500m.
+Sample Input
+3
+7
+1 17 3 13 7 23 12
+5
+5 4 3 2 1
+4
+10 100 1000 10000
+Sample Output
+Case #1: 18
+Case #2: 2.5
+Case #3: 5445
